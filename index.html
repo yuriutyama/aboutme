@@ -341,11 +341,17 @@
     <script src="./index.js"></script>
 
   <script>
-  window.onscroll = function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+
   function backToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return false;
         }
+});
+    
+  window.onscroll = function () {
+
     
       var scroll = document.getElementById("scrollTop");
       scroll.innerHTML = ``;
