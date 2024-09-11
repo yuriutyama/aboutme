@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/8046246873.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/85fa8a40f3.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
@@ -340,16 +340,21 @@
     <div id="scrollTop"></div>
     <script src="./index.js"></script>
 
-<script>
-  window.onscroll = function () {
-      var scroll = document.getElementById("scrollTop");
-      scroll.innerHTML = ``;
-      if (window.scrollY > 450) {
-          scroll.innerHTML = `<a href="#" class="scroll-top" style="text-decoration: none; display: flex;">
-                                                                                          <i class="fa-solid fa-arrow-up"></i>
-                                                                                     </a>`;
-      }
-  };
-</script>
+ <script>
+        window.onscroll = function () {
+            $("#scrollTop").html('');
+            if (window.scrollY > 450) {
+                $("#scrollTop").html(`<a href='javascript:backToTop()' class="scroll-top" style="text-decoration: none; display: flex;">
+                                                                                                    <i class="fas fa-solid fa-arrow-up"></i>
+                                                                                               </a>`);
+            }
+        };
+
+        function backToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return false;
+        }
+    </script>
+
 </body>
 </html>
