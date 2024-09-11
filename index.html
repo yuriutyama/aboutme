@@ -351,12 +351,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
     
   window.onscroll = function () {
-
-    
       var scroll = document.getElementById("scrollTop");
       scroll.innerHTML = ``;
       if (window.scrollY > 450) {
-          scroll.innerHTML = `<a href='javascript:backToTop()' class="scroll-top" style="text-decoration: none; display: flex;">
+          scroll.innerHTML = `<a href='javaswindow.scrollTo({ top: 0, behavior: 'smooth' }));' class="scroll-top" style="text-decoration: none; display: flex;">
                                                                                                     <i class="fas fa-solid fa-arrow-up"></i>
                                                                                                </a>`;
       }
