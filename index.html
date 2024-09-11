@@ -339,20 +339,22 @@
 
     <div id="scrollTop"></div>
     <script src="./index.js"></script>
-</body>
-   <script>
-        window.onscroll = function () {
-            $("#scrollTop").html('');
-            if (window.scrollY > 450) {
-                $("#scrollTop").html(`<a href='javascript:backToTop()' class="scroll-top" style="text-decoration: none; display: flex;">
+
+  <script>
+  window.onscroll = function () {
+      var scroll = document.getElementById("scrollTop");
+      scroll.innerHTML = ``;
+      if (window.scrollY > 450) {
+          scroll.innerHTML = `<a href='javascript:backToTop()' class="scroll-top" style="text-decoration: none; display: flex;">
                                                                                                     <i class="fas fa-solid fa-arrow-up"></i>
-                                                                                               </a>`);
-            }
-        };
+                                                                                               </a>``;
 
         function backToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return false;
         }
-    </script>
+      }
+  };
+</script>
+    </body>
 </html>
